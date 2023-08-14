@@ -1,15 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
+import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const container = document.getElementById('root') as HTMLElement;
+
+if (!container) {
+  throw new Error('no container to render to');
+}
+
+const root = ReactDOM.createRoot(container);
+
 root.render(
   <React.StrictMode>
-    <App />
+    <main className='appBodyContainer'>
+      <div className='appBodyCircleContainer'>
+        <header className='appHeader'>
+          <h2>Discog-ify</h2>
+          <h4>Create Record Label Playlists</h4>
+        </header>
+        <App signOut={undefined} user={undefined} />
+      </div>
+    </main>
   </React.StrictMode>
 );
 

@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.appHeader {
+  margin-top: 7rem;
+}
+.appBodyContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appBodyCircleContainer {
+  border: solid 0.25em hsla(160, 100%, 37%, 1);
+  height: 55rem;
+  width: 55rem;
+  border-radius: 50%;
+  text-align: center;
+}
